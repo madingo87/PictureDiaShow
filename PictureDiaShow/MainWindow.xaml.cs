@@ -9,9 +9,11 @@ namespace PictureDiaShow
     {
         public MainWindow()
         {
-            var delays = new List<string> { "1", "2", "3", "5", "7", "10" };
-            delays.Select(item => Delay_Select.Items.Add(item));
             InitializeComponent();
+
+            var delays = new List<string> { "1", "2", "3", "5", "7", "10" };
+            delays.ForEach(item => Delay_Select.Items.Add(item));
+            Delay_Select.SelectedItem = "3";
         }
 
         private void Start_Btn_Click(object sender, RoutedEventArgs e)

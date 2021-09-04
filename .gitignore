@@ -1,0 +1,7 @@
+/depricated/
+
+obj/
+bin/
+
+.vs
+.cache

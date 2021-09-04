@@ -1,0 +1,30 @@
+﻿<Window x:Class="PictureDiaShow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="PictureDiaShow" 
+        Height="437" 
+        Width="622">
+    <Grid>
+        <TextBox x:Name="ImageFolder_TextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,52,0,0" Text="E:\Bilder" TextWrapping="Wrap"  Width="273" BorderThickness="2" FontStyle="Italic"/>
+        <Button Content="Pfad auswählen" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="197,77,0,0" Name="SelectFolder_Btn" Click="SelectFolder_Btn_Click"/>
+
+        <!--<TextBox x:Name="Delay_TextBox" HorizontalAlignment="Left" Margin="169,138,0,0" Text="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" BorderThickness="2" HorizontalContentAlignment="Center"/>-->
+        <Label Content="Bilderpfad" HorizontalAlignment="Left" Margin="10,33,0,0" Padding="0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        <Separator HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,115,0,0" Height="8" Width="272"/>
+        <Label Content="Bilderübergang (Sekunden)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,135,0,0" />
+        <ComboBox x:Name="Delay_Select" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,135,0,0" Width="46" />
+        <Label Content="Shortcut Stop" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0" />
+        <TextBox x:Name="KeyStop_TextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,170,0,0" Text="s" TextWrapping="Wrap" Width="46" BorderThickness="2" HorizontalContentAlignment="Center"/>
+        <Label Content="Shortcut Next" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,200,0,0" />
+        <TextBox x:Name="KeyNext_TextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,200,0,0" Text="n" TextWrapping="Wrap" Width="46" BorderThickness="2" HorizontalContentAlignment="Center"/>
+        
+        <Label Content="Historie" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ListBox x:Name="History_ListBox" Margin="301,26,10,10" KeyDown="History_ListBox_KeyDown" MouseDoubleClick="History_ListBox_MouseDoubleClick"/>
+
+        <Button x:Name="Start_Btn" Content="Start" HorizontalAlignment="Left" Margin="92,0,0,30" VerticalAlignment="Bottom" Width="108" Click="Start_Btn_Click" BorderThickness="2" FontWeight="Bold"/>
+    </Grid>
+</Window>
